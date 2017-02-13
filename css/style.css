@@ -10,23 +10,26 @@
 html,
 body,
 header,
-main,
 ul {
   margin-top: 0;
 }
 
 body {
-  background-color: rgb(255, 255, 255);
   font-family: "Lato", sans-serif;
-  color: rgb(32, 35, 37);
+  font-weight: lighter;
   text-align: center;
-  margin: 0 auto;
+  font-size: 10px;
 }
 
-.main-header,
-.main-footer {
-  background-color: rgb(30, 50, 56);
-  color: rgb(176, 190, 197);
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+
+
+}
+.main-wrapper {
+  /*margin: 0 auto;
+  width: 90%;*/
 }
 
 ul {
@@ -35,7 +38,7 @@ ul {
 
 li {
   list-style: none;
-  text-transform: capitalize;
+  text-transform: uppercase;
 }
 
 a {
@@ -43,11 +46,59 @@ a {
   color: inherit;
 }
 
-a:hover {
-  color: rgb(255, 255, 255);
-}
-
 .main-footer p {
   margin: 0;
-  padding-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+  font-size: 0.7rem;
 }
+
+p {
+  font-size: 1rem;
+}
+
+.main-nav li,
+.col-2 li,
+h5 {
+  font-size: 0.9rem;
+}
+
+.col-3 li {
+  font-size: 1rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+}
+
+h2,
+h5 {
+  margin: 0;
+}
+
+/* =============================================================================
+==================================== Colours ================================ */
+
+body {
+  color: rgb(56, 56, 56);
+  background-color: rgb(255, 255, 255);
+}
+
+.main-header,
+.main-footer {
+  color: rgb(176, 190, 197);
+  background-color: rgb(30, 50, 56);
+}
+
+.col-3 li {
+  color: rgb(21, 145, 254);
+}
+
+h5,
+.col-2 li {
+  color: rgb(112, 112, 112);
+}
+
+
+/* =============================================================================
+================================== Mobile First ============================= */
