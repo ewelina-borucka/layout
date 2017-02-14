@@ -15,13 +15,8 @@ body {
 }
 
 .main-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
-}
-
-.main-wrapper {
-  /*margin: 0 auto;*/
-  /*width: 90%;*/
 }
 
 ul {
@@ -29,13 +24,14 @@ ul {
   margin: 0;                            /* removes white space at the top */
 }
 
-h1,
+.main-header-heading,
 h2,
 h5 {
   margin: 0;
 }
 
-li {
+li,
+h1 {
   list-style: none;
   text-transform: uppercase;
 }
@@ -45,21 +41,14 @@ a {
   color: inherit;
 }
 
-
 button {
   margin: 0;
   padding: 0;
   border: 0;
-  /*background: transparent;*/
   font-family: inherit;
   font-size: 0.8rem;
   cursor: pointer;
 }
-
-/*button::-moz-focus-inner{
-  padding : 0;
-  border  : 0;
-}*/
 
 .btn-box {
   border: 1px solid lightgray;
@@ -114,14 +103,14 @@ h5, .col-left li { color: rgb(112, 112, 112); }
 
 
 /* =============================================================================
-========================== Mobile First BURGER Menu  ======================== */
+========================== Mobile First ===================================== */
 /* =============================================================================
-=================================== iPhone 5 and 6 ========================== */
+========================== iPhone 5 and 6 and 6+ ============================ */
 /* ========================================================================== */
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 614px) {
 
-  /* ================  Burger navigation styling ========================== */
+  /* ======================== BURGER Menu  ========================== */
   .hamburgler-icon-wrapper {
     position: absolute;
     top: 2rem;
@@ -140,7 +129,6 @@ h5, .col-left li { color: rgb(112, 112, 112); }
     height: 0.2rem;
     width: 1.4rem;
     background-color: rgb(232, 242, 247);
-
     transition: all 0.2s ease;
   }
 
@@ -174,7 +162,6 @@ h5, .col-left li { color: rgb(112, 112, 112); }
   .hamburgler-active .hamburgler-icon:before,
   .hamburgler-active .hamburgler-icon:after {
     background-color: rgb(232, 242, 247);
-
   }
 
   .hamburgler-menu {
@@ -235,8 +222,8 @@ h5, .col-left li { color: rgb(112, 112, 112); }
     font-size: 1.5rem;
   }
 
-  h1 {
-    font-size: 2rem;
+  .main-header-heading {
+    font-size: 1.5rem;
     text-align: right;
     padding: 1.5rem;
     font-weight: 100;
@@ -247,11 +234,11 @@ h5, .col-left li { color: rgb(112, 112, 112); }
     padding: 0.6rem;
   }
 
-.col-main {
-  padding: 0 0.5rem;
-  text-align: justify;
-  letter-spacing: 0.01rem;
-}
+  .col-main {
+    padding: 0 0.5rem;
+    text-align: justify;
+    letter-spacing: 0.01rem;
+  }
 
   /*  ================= col-right ---> bottom buttons =======================  */
 
@@ -276,7 +263,6 @@ h5, .col-left li { color: rgb(112, 112, 112); }
     padding: 1rem 0;
   }
 
-  /*  ================= Display none for mobile  =======================  */
   h5 {
     display: none;
   }
@@ -284,13 +270,101 @@ h5, .col-left li { color: rgb(112, 112, 112); }
 }
 
 
+@media screen and (min-width: 615px) {
+
+  .main-nav-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .main-nav-list li {
+    flex: 1 1 33.333333333%;
+    font-size: 1rem;
+    border: 1px solid white;
+    padding: 1rem;
+  }
+
+  .main-header-heading {
+    text-transform: capitalize;
+    font-size: 2.2rem;
+    padding: 1rem 0 1rem;
+    font-weight: 100;
+  }
+
+                        /* @extend ??? */
+  .col-right-list {
+    display: flex;
+  }
+
+  .col-right-list li {
+    flex: 1;
+    background-color: rgb(21, 145, 254);
+    border-right: 1px solid white;
+    color: white;
+    height: 3rem;
+    line-height: 3rem;
+  }
+
+  .col-right-list li:last-child {
+    border-right: none;
+  }
+
+  .col-right-list a {
+    padding: 1rem 0;
+  }
+
+  h5 {
+    display: none;
+  }
+
+  /* @extend finish ????*/
 
 
-/*  ========================================================================= */
+  .main-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 3rem;
+    align-items: baseline;
+  }
+
+  .col-main {
+    flex: 1 1 70%;
+    font-size: 1rem;
+    padding: 0 1rem 0;
+
+  }
+
+  .col-left {
+    flex: 1 1 30%;
+    font-size: 1rem;
+
+  }
+
+  .col-left li {
+    padding-bottom: 1rem;
+    text-transform: capitalize;
+
+  }
+
+  .col-right {
+    flex: 1 1 100%;
+  }
+}
 
 
-@media screen and (min-width: 415px) {
 
+@media screen and (min-width: 768px) {
+
+
+  .main-nav-list li {
+    flex: 1;
+
+  }
+
+  /*.main-wrapper {
+    margin: 0 auto;
+    width: 90%;
+  }*/
 
 
 }
