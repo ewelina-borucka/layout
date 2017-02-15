@@ -15,11 +15,6 @@ body {
   background-color: rgb(248, 248, 248);
 }
 
-.main-wrapper {
-  /*max-width: 1500px;*/
-  /*margin: 0 auto;*/
-}
-
 .main-container {
   max-width: 1500px;
   margin: auto;
@@ -152,6 +147,21 @@ sticky footer
   flex: 1;
 }*/
 
+/* =============================================================================
+==================================  Transitions  ============================ */
+
+
+.main-wrapper-col-left-list li {
+  transition: padding-bottom .4s, font-size .2s, color .2s;
+  transition-timing-function: ease-in-out;
+}
+
+.main-wrapper-col-left-list li:hover {
+  padding-bottom: 1.2rem;
+  font-size: 1.1rem;
+  color: rgb(104, 104, 104);
+}
+
 
 /* =============================================================================
 ========================== Mobile First ===================================== */
@@ -255,11 +265,13 @@ Nav Styling
     flex: 1;
     height: 2rem;
     text-transform: uppercase;
+    transition: color .4s, font-size .2s, font-weight .2s ease-out;
   }
 
   .main-nav-list li:hover {
     color: rgb(248, 248, 248);
-    font-weight: 400;
+    font-size: 1.1rem;
+    font-weight: 300;
   }
 
   .main-heading {
@@ -276,8 +288,8 @@ Main Wrapper Styling
   }
 
   .main-wrapper-col-left-list li {
-    border-bottom: 1px solid lightgray;
-    padding: 0.8rem;
+    border-bottom: 1px solid rgba(224,224,224, 0.2);
+    padding: 0.7rem;
   }
 
   .main-wrapper-col-right-list {
@@ -298,9 +310,7 @@ Main Wrapper Styling
     border-bottom: none;
   }
 
-  .main-wrapper-col-right-list li:hover {
-    background-color: rgb(77, 172, 254);
-  }
+
 }
 
 /* =============================================================================
@@ -371,10 +381,6 @@ Main Wrapper Styling
 
   .main-wrapper-col-right-list li:last-child {
     border-right: none;
-  }
-
-  .main-wrapper-col-right-list li:hover {
-    background-color: rgb(77, 172, 254);
   }
 
 }
