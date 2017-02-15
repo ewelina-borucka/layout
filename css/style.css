@@ -11,6 +11,8 @@ body {
   font-family: "Lato", sans-serif;
   text-align: center;
   font-size: 10px;
+  color: rgb(88, 88, 88);
+  background-color: rgb(248, 248, 248);
 }
 
 .main-wrapper {
@@ -29,11 +31,11 @@ h5 {
   margin: 0;
   padding: 0;
 }
-/* fonts sizes !!!!!!!!#########################*/
 .main-nav-list li,
 .col-left li,
 p {
   font-size: 1rem;
+  letter-spacing: 0.01rem;
 }
 
 h2 {
@@ -48,8 +50,6 @@ h5 {
 .col-right li {
   font-size: 0.9rem;
 }
-
-/* fonts sizes !!!!!!!!#########################*/
 
 li {
   list-style: none;
@@ -73,15 +73,25 @@ button {
 .main-nav-list li {
   font-weight: 300;
 }
+
 .main-heading {
   font-size: 2rem;
   font-weight: 100;
 }
 
+.col-left li {
+  padding-bottom: 1rem;
+}
+
+h5,
+.col-left li {
+  color: rgb(136, 136, 136);
+}
+
 .btn-box {
   border: 1px solid rgb(224,224,224);
   padding: 1rem;
-  border-radius: 3px;
+  border-radius: 4px;
 }
 
 .btn-more,
@@ -103,8 +113,10 @@ button {
   border: 1px solid rgb(52, 160, 254);
 }
 
-.col-left li {
-  padding-bottom: 1rem;
+.main-header,
+.main-footer {
+  color: rgb(222, 233, 237);
+  background-color: rgb(30, 50, 56);
 }
 
 .main-footer-para {
@@ -122,6 +134,7 @@ button {
   line-height: 1.4rem;
 }
 
+
 /*
 sticky footer
 */
@@ -134,32 +147,20 @@ sticky footer
 .main-wrapper {
   flex: 1;
 }*/
-/* =============================================================================
-==================================== Colours ================================ */
-
-body {
-  color: rgb(88, 88, 88);
-  background-color: rgb(248, 248, 248);
-}
-
-.main-header,
-.main-footer {
-  color: rgb(222, 233, 237);
-  background-color: rgb(30, 50, 56);
-}
-
-h5, .col-left li { color: rgb(136, 136, 136); }
 
 
 /* =============================================================================
 ========================== Mobile First ===================================== */
+
 /* =============================================================================
 ========================== iPhone 5 and 6 and 6+ ============================ */
 /* ========================================================================== */
 
 @media screen and (max-width: 700px) {
 
-/* ======================== BURGER Menu  ========================== */
+/*
+BURGER Menu
+*/
   .hamburgler-icon-wrapper {
     position: absolute;
     top: 2rem;
@@ -237,18 +238,24 @@ h5, .col-left li { color: rgb(136, 136, 136); }
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(0.2, 4);
+    transform: translate(-50%, -50%) scale(0.1);
   }
 
   .hamburgler-active .hamburgler-menu-list {
-    transform: translate(-50%, -50%) scale(2);
+    transform: translate(-50%, -50%) scale(1.6);
   }
-
-
-/*  ===================  General styling mobile  ========================== */
+/*
+Nav Styling
+*/
   .main-nav-list li {
     flex: 1;
     height: 2rem;
+    text-transform: uppercase;
+  }
+
+  .main-nav-list li:hover {
+    color: rgb(248, 248, 248);
+    font-weight: 400;
   }
 
   .main-heading {
@@ -256,12 +263,18 @@ h5, .col-left li { color: rgb(136, 136, 136); }
     padding: 1.5rem;
   }
 
-  .main-wrapper-col-left-list li {
-    border-bottom: 1px solid lightgray;
-    padding: 0.6rem;
+/*
+Main Wrapper Styling
+*/
+  .col-main {
+    padding: 2rem;
+    text-align: justify;
   }
 
-  /*  ================= col-right ---> bottom buttons =======================  */
+  .main-wrapper-col-left-list li {
+    border-bottom: 1px solid lightgray;
+    padding: 0.8rem;
+  }
 
   .main-wrapper-col-right-list {
     display: flex;
@@ -270,21 +283,24 @@ h5, .col-left li { color: rgb(136, 136, 136); }
 
   .main-wrapper-col-right-list li {
     flex: 1;
-    height: 2rem;
-    line-height: 2rem;
-
+    height: 3rem;
+    line-height: 3rem;
     background-color: rgb(52, 160, 254);
-    border-bottom: 1px solid rgb(248, 248, 248);
+    border-bottom: 2px solid rgb(248, 248, 248);
     color: rgb(248, 248, 248);
   }
 
   .main-wrapper-col-right-list li:last-child {
     border-bottom: none;
   }
+
+  .main-wrapper-col-right-list li:hover {
+    background-color: rgb(77, 172, 254);
+  }
 }
 
 /* =============================================================================
-============================ Larger devices  ================================ */
+==========================  Larger devices and iPad  ========================= */
 /* ========================================================================== */
 
 @media screen and (min-width: 701px) {
@@ -296,7 +312,6 @@ h5, .col-left li { color: rgb(136, 136, 136); }
 
   .main-nav-list li {
     flex: 1 1 33.333333333%;
-    font-size: 0.8rem;
     border-bottom: 1px solid rgba(222, 233, 237, 0.4);
     border-right: 1px solid rgba(222, 233, 237, 0.4);
     padding: 1rem;
@@ -315,7 +330,7 @@ h5, .col-left li { color: rgb(136, 136, 136); }
   .main-wrapper {
     display: flex;
     flex-wrap: wrap;
-    padding-top: 3rem;
+    padding-top: 1rem;
     align-items: baseline;
   }
 
@@ -330,7 +345,6 @@ h5, .col-left li { color: rgb(136, 136, 136); }
   .col-left {
     flex: 1 1 33.33333333%;
     font-size: 0.9rem;
-
   }
 
   .col-right {
@@ -355,10 +369,14 @@ h5, .col-left li { color: rgb(136, 136, 136); }
     border-right: none;
   }
 
+  .main-wrapper-col-right-list li:hover {
+    background-color: rgb(77, 172, 254);
+  }
+
 }
 
 /* =============================================================================
-==================================  ================================= */
+==================================  Desktop  ================================ */
 /* ========================================================================== */
 @media screen and (min-width: 960px) {
 
