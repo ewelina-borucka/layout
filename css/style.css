@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Lato');
 
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400');
 
 /* =============================================================================
 ================================== Basic Styling ============================ */
@@ -9,19 +9,18 @@
 
 body {
   font-family: "Lato", sans-serif;
-  font-weight: lighter;
   text-align: center;
   font-size: 10px;
 }
 
-.main-container {
-  max-width: 1400px;
+.main-wrapper {
+  max-width: 1500px;
   margin: 0 auto;
 }
 
 ul {
   padding: 0;
-  margin: 0;                            /* removes white space at the top */
+  margin: 0;
 }
 
 .main-header-heading,
@@ -29,11 +28,19 @@ h2,
 h5 {
   margin: 0;
 }
+.main-header-heading {
+  font-size: 2rem;
+  font-weight: 100;
+}
 
 li,
 h1 {
   list-style: none;
-  text-transform: uppercase;
+  text-transform: capitalize;
+}
+
+.main-nav-list li {
+  font-weight: 300;
 }
 
 a {
@@ -46,12 +53,11 @@ button {
   padding: 0;
   border: 0;
   font-family: inherit;
-  font-size: 0.8rem;
   cursor: pointer;
 }
 
 .btn-box {
-  border: 1px solid lightgray;
+  border: 1px solid rgb(224,224,224);
   padding: 1rem;
   border-radius: 3px;
 }
@@ -60,18 +66,20 @@ button {
 .btn-save {
   padding: 0.6rem;
   border-radius: 3px;
+  font-size: 0.8rem;
+
 }
 
 .btn-more {
-  background-color: rgb(21, 145, 254);
-  color: white;
+  background-color: rgb(52, 160, 254);
+  color: rgb(248, 248, 248);
 }
 
 .btn-save {
-  background-color: white;
-  color: rgb(21, 145, 254);
+  background-color: rgb(248, 248, 248);
+  color: rgb(52, 160, 254);
+  border: 1px solid rgb(52, 160, 254);
   font-weight: bold;
-  border: 1px solid rgb(21, 145, 254);
 }
 
 .main-footer-para {
@@ -83,23 +91,26 @@ button {
 .main-footer {
   height: 4rem;
 }
+
+.main-wrapper-col-main-paragraph {
+  line-height: 1.4rem;
+}
 /* =============================================================================
 ==================================== Colours ================================ */
 
 body {
-  color: rgb(56, 56, 56);
-  background-color: rgb(255, 255, 255);
+  color: rgb(88, 88, 88);
+  background-color: rgb(248, 248, 248);
 }
 
 .main-header,
 .main-footer {
-  color: rgb(232, 242, 247);
+  /*color: rgb(232, 242, 247);*/
+  color: rgb(222, 233, 237);
   background-color: rgb(30, 50, 56);
 }
 
-.col-right li { color: rgb(21, 145, 254); }
-
-h5, .col-left li { color: rgb(112, 112, 112); }
+h5, .col-left li { color: rgb(136, 136, 136); }
 
 
 /* =============================================================================
@@ -108,7 +119,7 @@ h5, .col-left li { color: rgb(112, 112, 112); }
 ========================== iPhone 5 and 6 and 6+ ============================ */
 /* ========================================================================== */
 
-@media screen and (max-width: 614px) {
+@media screen and (max-width: 600px) {
 
   /* ======================== BURGER Menu  ========================== */
   .hamburgler-icon-wrapper {
@@ -128,7 +139,7 @@ h5, .col-left li { color: rgb(112, 112, 112); }
     border-radius: 1px;
     height: 0.2rem;
     width: 1.4rem;
-    background-color: rgb(232, 242, 247);
+    background-color: rgb(222, 233, 237);
     transition: all 0.2s ease;
   }
 
@@ -154,14 +165,14 @@ h5, .col-left li { color: rgb(112, 112, 112); }
     top: 0;
   }
 
-  .hamburgler-active .hamburgler-icon:before {
-    /*transform: rotate(90deg);*/
-  }
+  /*.hamburgler-active .hamburgler-icon:before {
+    transform: rotate(90deg);
+  }*/
 
   .hamburgler-active .hamburgler-icon,
   .hamburgler-active .hamburgler-icon:before,
   .hamburgler-active .hamburgler-icon:after {
-    background-color: rgb(232, 242, 247);
+    background-color: rgb(222, 233, 237);
   }
 
   .hamburgler-menu {
@@ -202,7 +213,6 @@ h5, .col-left li { color: rgb(112, 112, 112); }
 
   .main-nav-list-item a:hover {
     color: white;
-    font-weight: bold;
   }
 
   /*  ===================  General styling mobile  ========================== */
@@ -223,10 +233,8 @@ h5, .col-left li { color: rgb(112, 112, 112); }
   }
 
   .main-header-heading {
-    font-size: 1.5rem;
     text-align: right;
     padding: 1.5rem;
-    font-weight: 100;
   }
 
   .main-wrapper-col-left-list li {
@@ -248,9 +256,10 @@ h5, .col-left li { color: rgb(112, 112, 112); }
 
   .col-right-list li {
     flex: 1;
-    background-color: rgb(21, 145, 254);
-    border-right: 1px solid white;
-    color: white;
+
+    background-color: rgb(52, 160, 254);
+    border-right: 1px solid rgb(248, 248, 248);
+    color: rgb(248, 248, 248);
     height: 3rem;
     line-height: 3rem;
   }
@@ -270,7 +279,7 @@ h5, .col-left li { color: rgb(112, 112, 112); }
 }
 
 
-@media screen and (min-width: 615px) {
+@media screen and (min-width: 601px) {
 
   .main-nav-list {
     display: flex;
@@ -279,17 +288,21 @@ h5, .col-left li { color: rgb(112, 112, 112); }
 
   .main-nav-list li {
     flex: 1 1 33.333333333%;
-    font-size: 1rem;
-    border: 1px solid white;
+    font-size: 0.8rem;
+    border-bottom: 1px solid rgba(222, 233, 237, 0.4);
+    border-right: 1px solid rgba(222, 233, 237, 0.4);
     padding: 1rem;
   }
 
-  .main-header-heading {
-    text-transform: capitalize;
-    font-size: 2.2rem;
-    padding: 1rem 0 1rem;
-    font-weight: 100;
+  .main-nav-list li:last-child,
+  .main-nav-list li:nth-child(3) {
+    border-right: none;
   }
+
+  .main-header-heading {
+    padding: 0.5rem 0 0.5rem;
+  }
+
 
                         /* @extend ??? */
   .col-right-list {
@@ -298,73 +311,110 @@ h5, .col-left li { color: rgb(112, 112, 112); }
 
   .col-right-list li {
     flex: 1;
-    background-color: rgb(21, 145, 254);
-    border-right: 1px solid white;
-    color: white;
-    height: 3rem;
-    line-height: 3rem;
+    background-color: rgb(52, 160, 254);
+    border-right: 1px solid rgb(248, 248, 248);
+    color: rgb(248, 248, 248);
+    height: 4rem;
+    line-height: 4rem;
+    font-size: 0.9rem;
   }
 
   .col-right-list li:last-child {
     border-right: none;
   }
 
-  .col-right-list a {
-    padding: 1rem 0;
-  }
-
   h5 {
     display: none;
   }
-
-  /* @extend finish ????*/
-
+                        /* @extend finish ????*/
 
   .main-wrapper {
     display: flex;
     flex-wrap: wrap;
-    padding-top: 3rem;
+    padding-top: 1rem;
     align-items: baseline;
   }
 
   .col-main {
-    flex: 1 1 70%;
+    flex: 1 1 66.66666666%;
     font-size: 1rem;
-    padding: 0 1rem 0;
-
+    text-align: justify;
   }
 
   .col-left {
-    flex: 1 1 30%;
-    font-size: 1rem;
-
+    flex: 1 1 33.33333333%;
+    font-size: 0.9rem;
   }
 
   .col-left li {
     padding-bottom: 1rem;
-    text-transform: capitalize;
-
   }
 
   .col-right {
     flex: 1 1 100%;
   }
+
+
 }
 
 
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 960px) {
 
+  h5 {
+    display: unset;
+  }
 
   .main-nav-list li {
     flex: 1;
-
   }
 
-  /*.main-wrapper {
-    margin: 0 auto;
-    width: 90%;
-  }*/
+  .main-nav-list li:nth-child(3) {
+    border-right: 1px solid rgba(222, 233, 237, 0.4);
+  }
+
+
+  .main-header-heading {
+    padding: 4rem 0 1.5rem 4rem;
+    text-align: left;
+  }
+
+  .main-wrapper {
+    display: flex;
+    font-size: 1rem;
+    padding: 4rem;
+  }
+
+  .col-main {
+    flex: 1 1 70%;
+    padding: 0 4.4rem 0 0;
+  }
+
+  .col-left {
+    flex: 1 1 20%;
+  }
+
+  .col-right {
+    flex: 1 1 10%;
+    border-left: 2px solid lightgray;
+    padding-left: 1rem;
+  }
+
+  .col-right-list li {
+    color: rgb(52, 160, 254);
+    font-weight: bold;
+    background-color: inherit;
+    line-height: 2rem;
+    height: auto;
+  }
+
+  .main-wrapper-col-left-list,
+  .col-right-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
 
 
 }
