@@ -265,7 +265,7 @@ Nav Styling
     flex: 1;
     height: 2rem;
     text-transform: uppercase;
-    transition: color .4s, font-size .2s, font-weight .2s ease-out;
+    transition: color .3s, font-size .2s, font-weight .2s ease-out;
   }
 
   .main-nav-list li:hover {
