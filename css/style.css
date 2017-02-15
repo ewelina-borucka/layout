@@ -23,24 +23,36 @@ ul {
   margin: 0;
 }
 
-.main-header-heading,
+h1,
 h2,
 h5 {
   margin: 0;
+  padding: 0;
 }
-.main-header-heading {
-  font-size: 2rem;
-  font-weight: 100;
+/* fonts sizes !!!!!!!!#########################*/
+.main-nav-list li,
+.col-left li,
+p {
+  font-size: 1rem;
 }
 
-li,
-h1 {
+h2 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 0.8rem;
+  display: none;
+}
+
+.col-right li {
+  font-size: 0.9rem;
+}
+
+/* fonts sizes !!!!!!!!#########################*/
+
+li {
   list-style: none;
-  text-transform: capitalize;
-}
-
-.main-nav-list li {
-  font-weight: 300;
 }
 
 a {
@@ -53,7 +65,17 @@ button {
   padding: 0;
   border: 0;
   font-family: inherit;
+  background-color: transparent;
+  outline: none;
   cursor: pointer;
+}
+
+.main-nav-list li {
+  font-weight: 300;
+}
+.main-heading {
+  font-size: 2rem;
+  font-weight: 100;
 }
 
 .btn-box {
@@ -67,25 +89,29 @@ button {
   padding: 0.6rem;
   border-radius: 3px;
   font-size: 0.8rem;
-
 }
 
 .btn-more {
   background-color: rgb(52, 160, 254);
   color: rgb(248, 248, 248);
+  font-weight: 300;
 }
 
 .btn-save {
   background-color: rgb(248, 248, 248);
   color: rgb(52, 160, 254);
   border: 1px solid rgb(52, 160, 254);
-  font-weight: bold;
+}
+
+.col-left li {
+  padding-bottom: 1rem;
 }
 
 .main-footer-para {
   margin: 0;
   line-height: 4rem;
-  font-size: 0.6rem;
+  font-size: 0.7rem;
+  font-weight: 100;
 }
 
 .main-footer {
@@ -95,6 +121,19 @@ button {
 .main-wrapper-col-main-paragraph {
   line-height: 1.4rem;
 }
+
+/*
+sticky footer
+*/
+/*.main-container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.main-wrapper {
+  flex: 1;
+}*/
 /* =============================================================================
 ==================================== Colours ================================ */
 
@@ -105,7 +144,6 @@ body {
 
 .main-header,
 .main-footer {
-  /*color: rgb(232, 242, 247);*/
   color: rgb(222, 233, 237);
   background-color: rgb(30, 50, 56);
 }
@@ -119,15 +157,15 @@ h5, .col-left li { color: rgb(136, 136, 136); }
 ========================== iPhone 5 and 6 and 6+ ============================ */
 /* ========================================================================== */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
 
-  /* ======================== BURGER Menu  ========================== */
+/* ======================== BURGER Menu  ========================== */
   .hamburgler-icon-wrapper {
     position: absolute;
     top: 2rem;
     left: 1.5rem;
-    /*height: 0.5rem;*/
-    /*width: 1rem;*/
+    height: 0.5rem;
+    width: 1rem;
     cursor: pointer;
   }
 
@@ -203,36 +241,17 @@ h5, .col-left li { color: rgb(136, 136, 136); }
   }
 
   .hamburgler-active .hamburgler-menu-list {
-    transform: translate(-50%, -50%) scale(1.8);
+    transform: translate(-50%, -50%) scale(2);
   }
 
+
+/*  ===================  General styling mobile  ========================== */
   .main-nav-list li {
     flex: 1;
     height: 2rem;
   }
 
-  .main-nav-list-item a:hover {
-    color: white;
-  }
-
-  /*  ===================  General styling mobile  ========================== */
-
-  .main-nav-list li,
-  .col-left li,
-  h5,
-  p {
-    font-size: 1rem;
-  }
-
-  .col-right li {
-    font-size: 0.7rem;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-  }
-
-  .main-header-heading {
+  .main-heading {
     text-align: right;
     padding: 1.5rem;
   }
@@ -242,44 +261,33 @@ h5, .col-left li { color: rgb(136, 136, 136); }
     padding: 0.6rem;
   }
 
-  .col-main {
-    padding: 0 0.5rem;
-    text-align: justify;
-    letter-spacing: 0.01rem;
-  }
-
   /*  ================= col-right ---> bottom buttons =======================  */
 
-  .col-right-list {
+  .main-wrapper-col-right-list {
     display: flex;
+    flex-direction: column;
   }
 
-  .col-right-list li {
+  .main-wrapper-col-right-list li {
     flex: 1;
+    height: 2rem;
+    line-height: 2rem;
 
     background-color: rgb(52, 160, 254);
-    border-right: 1px solid rgb(248, 248, 248);
+    border-bottom: 1px solid rgb(248, 248, 248);
     color: rgb(248, 248, 248);
-    height: 3rem;
-    line-height: 3rem;
   }
 
-  .col-right-list li:last-child {
-    border-right: none;
+  .main-wrapper-col-right-list li:last-child {
+    border-bottom: none;
   }
-
-  .col-right-list a {
-    padding: 1rem 0;
-  }
-
-  h5 {
-    display: none;
-  }
-
 }
 
+/* =============================================================================
+============================ Larger devices  ================================ */
+/* ========================================================================== */
 
-@media screen and (min-width: 601px) {
+@media screen and (min-width: 701px) {
 
   .main-nav-list {
     display: flex;
@@ -299,66 +307,59 @@ h5, .col-left li { color: rgb(136, 136, 136); }
     border-right: none;
   }
 
-  .main-header-heading {
-    padding: 0.5rem 0 0.5rem;
+  .main-heading {
+    padding: 3rem 0 1.5rem 4rem;
+    text-align: left;
   }
-
-
-                        /* @extend ??? */
-  .col-right-list {
-    display: flex;
-  }
-
-  .col-right-list li {
-    flex: 1;
-    background-color: rgb(52, 160, 254);
-    border-right: 1px solid rgb(248, 248, 248);
-    color: rgb(248, 248, 248);
-    height: 4rem;
-    line-height: 4rem;
-    font-size: 0.9rem;
-  }
-
-  .col-right-list li:last-child {
-    border-right: none;
-  }
-
-  h5 {
-    display: none;
-  }
-                        /* @extend finish ????*/
 
   .main-wrapper {
     display: flex;
     flex-wrap: wrap;
-    padding-top: 1rem;
+    padding-top: 3rem;
     align-items: baseline;
   }
 
   .col-main {
     flex: 1 1 66.66666666%;
     font-size: 1rem;
-    text-align: justify;
+    text-align: left;
+    padding-right: 3rem;
+    padding-bottom: 1rem;
   }
 
   .col-left {
     flex: 1 1 33.33333333%;
     font-size: 0.9rem;
-  }
 
-  .col-left li {
-    padding-bottom: 1rem;
   }
 
   .col-right {
     flex: 1 1 100%;
   }
 
+  .main-wrapper-col-right-list {
+    display: flex;
+  }
+
+  .main-wrapper-col-right-list li {
+    flex: 1;
+
+    background-color: rgb(52, 160, 254);
+    border-right: 1px solid rgb(248, 248, 248);
+    color: rgb(248, 248, 248);
+    height: 3.5rem;
+    line-height: 3.5rem;
+  }
+
+  .main-wrapper-col-right-list li:last-child {
+    border-right: none;
+  }
 
 }
 
-
-
+/* =============================================================================
+==================================  ================================= */
+/* ========================================================================== */
 @media screen and (min-width: 960px) {
 
   h5 {
@@ -373,21 +374,18 @@ h5, .col-left li { color: rgb(136, 136, 136); }
     border-right: 1px solid rgba(222, 233, 237, 0.4);
   }
 
-
-  .main-header-heading {
+  .main-heading {
     padding: 4rem 0 1.5rem 4rem;
-    text-align: left;
   }
 
   .main-wrapper {
     display: flex;
-    font-size: 1rem;
-    padding: 4rem;
+    padding: 2rem;
   }
 
   .col-main {
     flex: 1 1 70%;
-    padding: 0 4.4rem 0 0;
+    padding: 0 3rem 0 0;
   }
 
   .col-left {
@@ -396,25 +394,23 @@ h5, .col-left li { color: rgb(136, 136, 136); }
 
   .col-right {
     flex: 1 1 10%;
-    border-left: 2px solid lightgray;
+    border-left: 2px solid rgb(224,224,224);
     padding-left: 1rem;
   }
 
-  .col-right-list li {
+  .main-wrapper-col-right-list li {
     color: rgb(52, 160, 254);
     font-weight: bold;
     background-color: inherit;
     line-height: 2rem;
-    height: auto;
+    height: 2rem;
   }
 
   .main-wrapper-col-left-list,
-  .col-right-list {
+  .main-wrapper-col-right-list {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
   }
-
-
 
 }
