@@ -20,11 +20,7 @@ body {
   margin: auto;
 }
 
-ul {
-  padding: 0;
-  margin: 0;
-}
-
+ul,
 h1,
 h2,
 h5 {
@@ -32,23 +28,7 @@ h5 {
   padding: 0;
 }
 
-.main-nav-list li,
-.col-left li,
-p {
-  font-size: 1rem;
-  letter-spacing: 0.01rem;
-}
-
-.main-wrapper-col-main-paragraph {
-  line-height: 1.4rem;
-}
-
-h2 {
-  font-size: 1.7rem;
-}
-
 h5 {
-  font-size: 0.8rem;
   display: none;
 }
 
@@ -72,6 +52,26 @@ button {
 }
 
 /*
+  Fonts
+*/
+.main-nav-list li,
+.col-left li,
+.col-right li,
+p,
+h5 {
+  font-size: 1rem;
+  letter-spacing: 0.01rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+.main-wrapper-col-main-paragraph {
+  line-height: 1.5rem;
+}
+
+/*
   Header
   Footer
 */
@@ -81,15 +81,14 @@ button {
   background-color: rgb(30, 40, 50);
 }
 
+.main-footer {
+  height: 4rem;
+}
 .main-footer-para {
   margin: 0;
   line-height: 4rem;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: 300;
-}
-
-.main-footer {
-  height: 4rem;
 }
 
 .main-nav-list li {
@@ -110,9 +109,7 @@ button {
 }
 
 /*
-  Buttons
-  Styling
-  Transition
+  Buttons Styling Transition
 */
 .btn-box {
   border: 1px solid rgb(224,224,224);
@@ -139,7 +136,6 @@ button {
   border-radius: 4px;
 }
 
-
 .btn-more {
   background-color: rgb(52, 160, 254);
   color: rgb(248, 248, 248);
@@ -155,9 +151,6 @@ button {
 /*
   Columns
 */
-.col-right li {
-  font-size: 0.9rem;
-}
 
 .col-left li {
   padding-bottom: 1rem;
@@ -170,10 +163,10 @@ h5,
 
 .main-wrapper-col-left-list li {
   font-size: 1.1rem;
-  -webkit-transition: padding .3s, font-size .2s, color .2s;
-  transition: padding .3s, font-size .2s, color .2s;
+  -webkit-transition: padding-bottom .3s, font-size .2s, color .2s;
+  transition: padding-bottom .3s, font-size .2s, color .2s;
   -webkit-transition-timing-function: ease-in-out;
-          transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
 }
 
 .main-wrapper-col-left-list li:hover {
@@ -236,7 +229,7 @@ BURGER Menu
   .hamburgler-active .hamburgler-icon {
     background: transparent;
     -webkit-transform: rotate(-135deg);
-            transform: rotate(-135deg);
+    transform: rotate(-135deg);
   }
 
   .hamburgler-active .hamburgler-icon:before,
@@ -254,6 +247,8 @@ BURGER Menu
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
     opacity: 0;
+    /* pointer-events ??*/
+    pointer-events: none;
     position: absolute;
     top: 0;
     right: 0;
@@ -264,6 +259,8 @@ BURGER Menu
 
   .hamburgler-active .hamburgler-menu {
     opacity: 1;
+    /* pointer-events ??*/
+    pointer-events: initial;
   }
 
   .hamburgler-menu-list {
@@ -272,20 +269,20 @@ BURGER Menu
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-transition: all 0.4s ease;
     transition: all 0.4s ease;
     position: absolute;
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%) scale(0.1);
-            transform: translate(-50%, -50%) scale(0.1);
+    transform: translate(-50%, -50%) scale(0.1);
   }
 
   .hamburgler-active .hamburgler-menu-list {
     -webkit-transform: translate(-50%, -50%) scale(1.6);
-            transform: translate(-50%, -50%) scale(1.6);
+    transform: translate(-50%, -50%) scale(1.6);
   }
 
 /*
@@ -293,8 +290,8 @@ Nav Styling
 */
   .main-nav-list li {
     -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    -ms-flex: 1;
+    flex: 1;
     height: 2rem;
     text-transform: uppercase;
     -webkit-transition: font-size .2s ease-in-out .3s;
@@ -324,8 +321,22 @@ Main Wrapper Styling
   }
 
   .main-wrapper-col-left-list li:first-child {
-    padding-top: 1rem;
+    padding-top: 1.5rem;
   }
+
+  /*.main-wrapper-col-left-list li {
+    font-size: 1.1rem;
+    -webkit-transition: padding-bottom .3s, font-size .2s, color .2s;
+    transition: padding-bottom .3s, font-size .2s, color .2s;
+    -webkit-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+  }
+
+  .main-wrapper-col-left-list li:hover {
+    padding-bottom: 1.2rem;
+    font-size: 1.2rem;
+    color: rgb(80, 80, 80);
+  }*/
 
   .main-wrapper-col-right-list {
     display: -webkit-box;
@@ -333,14 +344,14 @@ Main Wrapper Styling
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
 
   .main-wrapper-col-right-list li {
     -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    -ms-flex: 1;
+    flex: 1;
     height: 3rem;
     line-height: 3rem;
     background-color: rgb(52, 160, 254);
@@ -358,7 +369,7 @@ Main Wrapper Styling
   .btn-box {
     border: none;
     -ms-flex-pack: distribute;
-        justify-content: space-around;
+    justify-content: space-around;
   }
 
 }
@@ -374,13 +385,13 @@ Main Wrapper Styling
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
   }
 
   .main-nav-list li {
     -webkit-box-flex: 1;
-        -ms-flex: 1 1 33.333333333%;
-            flex: 1 1 33.333333333%;
+    -ms-flex: 1 1 33.333333333%;
+    flex: 1 1 33.333333333%;
     border-bottom: 1px solid rgba(222, 233, 237, 0.4);
     border-right: 1px solid rgba(222, 233, 237, 0.4);
     padding: 1.5rem;
@@ -401,17 +412,17 @@ Main Wrapper Styling
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
     padding-top: 1rem;
     -webkit-box-align: baseline;
-        -ms-flex-align: baseline;
-            align-items: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
   }
 
   .col-main {
     -webkit-box-flex: 1;
-        -ms-flex: 1 1 66.66666666%;
-            flex: 1 1 66.66666666%;
+    -ms-flex: 1 1 66.66666666%;
+    flex: 1 1 66.66666666%;
     font-size: 1rem;
     text-align: left;
     padding-right: 3rem;
@@ -420,14 +431,14 @@ Main Wrapper Styling
 
   .col-left {
     -webkit-box-flex: 1;
-        -ms-flex: 1 1 33.33333333%;
-            flex: 1 1 33.33333333%;
+    -ms-flex: 1 1 33.33333333%;
+    flex: 1 1 33.33333333%;
   }
 
   .col-right {
     -webkit-box-flex: 1;
-        -ms-flex: 1 1 100%;
-            flex: 1 1 100%;
+    -ms-flex: 1 1 100%;
+    flex: 1 1 100%;
   }
 
   .main-wrapper-col-right-list {
@@ -438,8 +449,8 @@ Main Wrapper Styling
 
   .main-wrapper-col-right-list li {
     -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    -ms-flex: 1;
+    flex: 1;
 
     background-color: rgb(52, 160, 254);
     border-right: 1px solid rgb(248, 248, 248);
