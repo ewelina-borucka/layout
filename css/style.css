@@ -94,8 +94,8 @@ button {
 
 .main-nav-list li {
   font-weight: 300;
-  -webkit-transition: color .3s, font-size .2s, font-weight .2s ease-out;
-  transition: color .3s, font-size .2s, font-weight .2s ease-out;
+  -webkit-transition: color .3s, font-size .1s, font-weight .1s ease-out;
+  transition: color .3s, font-size .1s, font-weight .1s ease-out;
 }
 
 .main-nav-list li:hover {
@@ -165,10 +165,11 @@ button {
 
 h5,
 .col-left li {
-  color: rgb(128, 128, 128);
+  color: rgb(112, 112, 112);
 }
 
 .main-wrapper-col-left-list li {
+  font-size: 1.1rem;
   -webkit-transition: padding .3s, font-size .2s, color .2s;
   transition: padding .3s, font-size .2s, color .2s;
   -webkit-transition-timing-function: ease-in-out;
@@ -177,8 +178,8 @@ h5,
 
 .main-wrapper-col-left-list li:hover {
   padding-bottom: 1.2rem;
-  font-size: 1.1rem;
-  color: rgb(104, 104, 104);
+  font-size: 1.2rem;
+  color: rgb(80, 80, 80);
 }
 
 .fa-rocket {
@@ -421,7 +422,6 @@ Main Wrapper Styling
     -webkit-box-flex: 1;
         -ms-flex: 1 1 33.33333333%;
             flex: 1 1 33.33333333%;
-    font-size: 0.9rem;
   }
 
   .col-right {
@@ -498,6 +498,7 @@ Main Wrapper Styling
   .col-right li,
   p {
     font-size: 1.1rem;
+    line-height: 2.5rem;
   }
 
   .main-wrapper {
@@ -530,8 +531,6 @@ Main Wrapper Styling
   .main-wrapper-col-right-list li {
     color: rgb(52, 160, 254);
     background-color: inherit;
-    line-height: 2rem;
-    height: 2rem;
   }
 
   .main-wrapper-col-left-list,
