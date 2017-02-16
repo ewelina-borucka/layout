@@ -11,12 +11,12 @@ body {
   font-family: "Lato", sans-serif;
   text-align: center;
   font-size: 10px;
-  color: rgb(88, 88, 88);
+  color: rgb(72, 72, 72);
   background-color: rgb(248, 248, 248);
 }
 
 .main-container {
-  max-width: 1500px;
+  max-width: 2000px;
   margin: auto;
 }
 
@@ -44,7 +44,7 @@ p {
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
 }
 
 h5 {
@@ -77,14 +77,14 @@ button {
 */
 .main-header,
 .main-footer {
-  color: rgb(222, 233, 237);
-  background-color: rgb(30, 50, 56);
+  color: rgba(222, 233, 237, 0.8);
+  background-color: rgb(30, 40, 50);
 }
 
 .main-footer-para {
   margin: 0;
   line-height: 4rem;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   font-weight: 300;
 }
 
@@ -182,7 +182,7 @@ h5,
 }
 
 .fa-rocket {
-  color: rgb(222, 233, 237);
+  color: rgba(222, 233, 237, 0.8);
   margin-right: 0.4rem;
 }
 /* =============================================================================
@@ -382,7 +382,7 @@ Main Wrapper Styling
             flex: 1 1 33.333333333%;
     border-bottom: 1px solid rgba(222, 233, 237, 0.4);
     border-right: 1px solid rgba(222, 233, 237, 0.4);
-    padding: 1rem;
+    padding: 1.5rem;
   }
 
   .main-nav-list li:last-child,
@@ -465,10 +465,12 @@ Main Wrapper Styling
 /* =============================================================================
 ==================================  Desktop  ================================ */
 /* ========================================================================== */
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 1000px) {
 
   h5 {
     display: unset;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
   }
 
   .main-nav-list li {
@@ -477,12 +479,25 @@ Main Wrapper Styling
             flex: 1;
   }
 
+  .main-nav-list li {
+    padding: 1.5rem;
+  }
+
+
   .main-nav-list li:nth-child(3) {
     border-right: 1px solid rgba(222, 233, 237, 0.4);
   }
 
   .main-heading {
-    padding: 4rem 0 1.5rem 2rem;
+    padding: 3rem 0 1rem 2rem;
+    font-size: 3rem;
+  }
+
+  .main-nav-list li,
+  .col-left li,
+  .col-right li,
+  p {
+    font-size: 1.1rem;
   }
 
   .main-wrapper {
@@ -494,9 +509,8 @@ Main Wrapper Styling
 
   .col-main {
     -webkit-box-flex: 1;
-        -ms-flex: 1 1 70%;
-            flex: 1 1 70%;
-    padding: 0 3rem 0 0;
+        -ms-flex: 1 1 65%;
+            flex: 1 1 65%;
   }
 
   .col-left {
@@ -507,15 +521,14 @@ Main Wrapper Styling
 
   .col-right {
     -webkit-box-flex: 1;
-        -ms-flex: 1 1 10%;
-            flex: 1 1 10%;
+        -ms-flex: 1 1 15%;
+            flex: 1 1 15%;
     border-left: 2px solid rgb(224,224,224);
     padding-left: 1rem;
   }
 
   .main-wrapper-col-right-list li {
     color: rgb(52, 160, 254);
-    font-weight: bold;
     background-color: inherit;
     line-height: 2rem;
     height: 2rem;
@@ -536,7 +549,7 @@ Main Wrapper Styling
   }
 
   /*
-  sticky footer
+  sticky footer ??
   */
   .main-container {
     display: -webkit-box;
@@ -554,5 +567,40 @@ Main Wrapper Styling
         -ms-flex: 1;
             flex: 1;
   }
+
+}
+
+/* =============================================================================
+=========================   Desktop larger than 1300px ====================== */
+/* ========================================================================== */
+@media screen and (min-width: 1300px) {
+
+  .main-wrapper {
+    padding: 5rem 7rem;
+  }
+
+  .main-heading {
+    padding: 5rem 0 2rem 4rem;
+  }
+
+  .main-nav-list li,
+  .col-left li,
+  .col-right li {
+    font-size: 1.3rem;
+  }
+
+  .main-nav-list li {
+    padding: 2rem;
+  }
+
+  .main-wrapper-col-main-paragraph p {
+    line-height: 2.4rem;
+    font-size: 1.3rem;
+  }
+
+  .main-wrapper {
+    padding: 4rem;
+  }
+
 
 }
