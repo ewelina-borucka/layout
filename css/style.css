@@ -200,7 +200,7 @@ BURGER Menu
   .hamburgler-icon-wrapper {
     position: absolute;
     top: 2.5rem;
-    left: 1.5rem;
+    left: 0.5rem;
     height: 0.2rem;
     width: 0.2rem;
     cursor: pointer;
@@ -313,7 +313,7 @@ Nav Styling
 Main Wrapper Styling
 */
   .col-main {
-    padding: 0.5rem 2rem 2rem;
+    padding: 1rem 2rem 2rem;
     text-align: justify;
   }
 
