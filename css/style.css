@@ -103,29 +103,35 @@ button {
 
 /*
   Buttons
+  Styling
+  Transition
 */
 .btn-box {
   border: 1px solid rgb(224,224,224);
   padding: 1rem 0;
   border-radius: 4px;
-
   display: flex;
 }
 
 .btn-more,
 .btn-save {
   padding: 0.7rem;
-  border-radius: 3px;
+  border-radius: 2px;
   font-size: 0.8rem;
   letter-spacing: 0.04rem;
+  transition: font-size .2s, border-radius .4s ease-in-out .2s;
+}
+
+.btn-more:hover,
+.btn-save:hover {
+  font-size: 0.9rem;
+  border-radius: 4px;
 }
 
 .btn-more {
   background-color: rgb(52, 160, 254);
   color: rgb(248, 248, 248);
   font-weight: 300;
-  /*margin-left: 1.2rem;
-  margin-right: 0.2rem;*/
 }
 
 .btn-save {
@@ -414,7 +420,7 @@ Main Wrapper Styling
 */
   .btn-more {
     margin-left: 1.2rem;
-    margin-right: 0.2rem;
+    margin-right: 0.4rem;
   }
 
 }
