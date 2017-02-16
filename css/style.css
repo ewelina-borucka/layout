@@ -94,6 +94,13 @@ button {
 
 .main-nav-list li {
   font-weight: 300;
+  transition: color .3s, font-size .2s, font-weight .2s ease-out;
+}
+
+.main-nav-list li:hover {
+  color: rgb(248, 248, 248);
+  font-size: 1rem;
+  font-weight: 400;
 }
 
 .main-heading {
@@ -123,9 +130,7 @@ button {
 }
 
 .btn-more:hover,
-.btn-more:active,
-.btn-save:hover,
-.btn-save:active {
+.btn-save:hover {
   font-size: 0.9rem;
   border-radius: 4px;
 }
@@ -156,11 +161,8 @@ button {
 
 h5,
 .col-left li {
-  color: rgb(136, 136, 136);
+  color: rgb(128, 128, 128);
 }
-
-/* =============================================================================
-==================================  Transitions  ============================ */
 
 .main-wrapper-col-left-list li {
   transition: padding .3s, font-size .2s, color .2s;
@@ -173,19 +175,10 @@ h5,
   color: rgb(104, 104, 104);
 }
 
-/*
-sticky footer
-*/
-/*.main-container {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
+.fa-rocket {
+  color: rgb(222, 233, 237);
+  margin-right: 0.4rem;
 }
-
-.main-wrapper {
-  flex: 1;
-}*/
-
 /* =============================================================================
 ================================ Mobile First =============================== */
 
@@ -200,11 +193,12 @@ BURGER Menu
 */
   .hamburgler-icon-wrapper {
     position: absolute;
-    top: 2rem;
+    top: 2.5rem;
     left: 1.5rem;
-    height: 0.5rem;
-    width: 1rem;
+    height: 0.2rem;
+    width: 0.2rem;
     cursor: pointer;
+    padding: 1rem;
   }
 
   .hamburgler-icon,
@@ -214,21 +208,21 @@ BURGER Menu
     position: absolute;
     border-radius: 1px;
     height: 0.2rem;
-    width: 1.4rem;
+    width: 1.6rem;
     background-color: rgb(222, 233, 237);
-    transition: all 0.2s ease;
+    transition: all 0.2s ease-in;
   }
 
   .hamburgler-icon {
-    top: 0.55em;
+    top: 0.55rem;
   }
 
   .hamburgler-icon:before {
-    top: -0.55em;
+    top: -0.55rem;
   }
 
   .hamburgler-icon:after {
-    top: 0.55em;
+    top: 0.55rem;
   }
 
   .hamburgler-active .hamburgler-icon {
@@ -240,10 +234,6 @@ BURGER Menu
   .hamburgler-active .hamburgler-icon:after {
     top: 0;
   }
-
-  /*.hamburgler-active .hamburgler-icon:before {
-    transform: rotate(90deg);
-  }*/
 
   .hamburgler-active .hamburgler-icon,
   .hamburgler-active .hamburgler-icon:before,
@@ -289,13 +279,11 @@ Nav Styling
     flex: 1;
     height: 2rem;
     text-transform: uppercase;
-    transition: color .3s, font-size .2s, font-weight .2s ease-out;
+    transition: font-size .2s ease-in-out .3;
   }
 
   .main-nav-list li:hover {
-    color: rgb(248, 248, 248);
     font-size: 1.1rem;
-    font-weight: 300;
   }
 
   .main-heading {
@@ -482,6 +470,19 @@ Main Wrapper Styling
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  /*
+  sticky footer
+  */
+  .main-container {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  .main-wrapper {
+    flex: 1;
   }
 
 }
