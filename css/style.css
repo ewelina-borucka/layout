@@ -253,7 +253,6 @@ BURGER Menu
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
     opacity: 0;
-    pointer-events: none;
     position: absolute;
     top: 0;
     right: 0;
@@ -264,7 +263,6 @@ BURGER Menu
 
   .hamburgler-active .hamburgler-menu {
     opacity: 1;
-    pointer-events: initial;
   }
 
   .hamburgler-menu-list {
@@ -298,8 +296,8 @@ Nav Styling
             flex: 1;
     height: 2rem;
     text-transform: uppercase;
-    -webkit-transition: font-size .2s ease-in-out .3;
-    transition: font-size .2s ease-in-out .3;
+    -webkit-transition: font-size .2s ease-in-out .3s;
+    transition: font-size .2s ease-in-out .3s;
   }
 
   .main-nav-list li:hover {
