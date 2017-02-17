@@ -359,7 +359,7 @@ BURGER Menu
 }
 
 /* =============================================================================
-==========================  Larger devices and iPad  ========================= */
+==========================  Larger phones and iPads  ========================= */
 /* ========================================================================== */
 
 @media screen and (min-width: 701px) {
@@ -415,6 +415,7 @@ BURGER Menu
     flex: 1 1 66.66666666%;
     padding-right: 1.5rem;
     padding-bottom: 2rem;
+    text-align: justify;
   }
 
   .col-left {
@@ -434,7 +435,6 @@ BURGER Menu
     display: -ms-flexbox;
     display: flex;
   }
-
   .main-wrapper-col-right-list li {
     -webkit-box-flex: 1;
     -ms-flex: 1;
@@ -445,7 +445,6 @@ BURGER Menu
     height: 3.5rem;
     line-height: 3.5rem;
   }
-
   .main-wrapper-col-right-list li:last-child {
     border-right: none;
   }
@@ -470,65 +469,55 @@ BURGER Menu
 /* ========================================================================== */
 @media screen and (min-width: 1000px) {
 
-  h5 {
-    display: unset;
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-  }
-
   .main-nav-list li {
     -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    -ms-flex: 1;
+    flex: 1;
   }
-
-  .main-nav-list li {
-    padding: 1.5rem;
-  }
-
-
   .main-nav-list li:nth-child(3) {
     border-right: 1px solid rgba(222, 233, 237, 0.4);
   }
 
   .main-heading {
-    padding: 3rem 0 1rem 2rem;
-    font-size: 3rem;
+    padding: 3.5rem 0 1rem 2rem;
+    font-size: 2.9rem;
   }
 
   .main-nav-list li,
   .col-left li,
   .col-right li,
-  p {
+  p,
+  h5 {
     font-size: 1.1rem;
-    line-height: 2.5rem;
+    line-height: 1.9rem;
+  }
+
+  h5 {
+    display: unset;
   }
 
   .main-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding: 2rem;
+    padding: 3rem 2rem;;
   }
 
   .col-main {
     -webkit-box-flex: 1;
-        -ms-flex: 1 1 65%;
-            flex: 1 1 65%;
+    -ms-flex: 1 1 65%;
+    flex: 1 1 65%;
   }
-
   .col-left {
     -webkit-box-flex: 1;
-        -ms-flex: 1 1 20%;
-            flex: 1 1 20%;
+    -ms-flex: 1 1 20%;
+    flex: 1 1 20%;
   }
-
   .col-right {
     -webkit-box-flex: 1;
-        -ms-flex: 1 1 15%;
-            flex: 1 1 15%;
+    -ms-flex: 1 1 15%;
+    flex: 1 1 15%;
     border-left: 2px solid rgb(224,224,224);
-    padding-left: 1rem;
   }
 
   .main-wrapper-col-right-list li {
@@ -543,11 +532,17 @@ BURGER Menu
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .main-wrapper-col-left-list {
+    align-items: flex-start;
+  }
+
+  .btn-box {
+    border: none;
+    justify-content: flex-start;
   }
 
   /*
@@ -560,49 +555,64 @@ BURGER Menu
     min-height: 100vh;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
 
   .main-wrapper {
     -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    -ms-flex: 1;
+    flex: 1;
   }
 
 }
 
 /* =============================================================================
-=========================   Desktop larger than 1300px ====================== */
+=========================   Desktops larger than 1300px ====================== */
 /* ========================================================================== */
 @media screen and (min-width: 1300px) {
 
-  .main-wrapper {
-    padding: 5rem 7rem;
+  .main-nav-list li {
+    padding: 1.5rem;
   }
 
   .main-heading {
     padding: 5rem 0 2rem 4rem;
   }
 
+  .main-wrapper {
+    padding: 4rem;
+  }
+
+  h2 {
+    font-size: 2.1rem;
+  }
+
+  .col-right {
+    text-align: left;
+    padding-left: 2rem;
+  }
+
   .main-nav-list li,
-  .col-left li,
-  .col-right li {
+  .col-left li {
     font-size: 1.3rem;
   }
 
-  .main-nav-list li {
-    padding: 2rem;
+  .col-right li {
+    padding-top: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .col-main {
+    padding-right: 4rem;
   }
 
   .main-wrapper-col-main-paragraph p {
     line-height: 2.4rem;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
 
-  .main-wrapper {
-    padding: 4rem;
-  }
+
 
 
 }
