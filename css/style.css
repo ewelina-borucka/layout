@@ -61,7 +61,7 @@ button,
 p,
 h5 {
   font-size: 1rem;
-  letter-spacing: 0.01rem;
+  letter-spacing: 0.02rem;
 }
 
 h5,
@@ -288,20 +288,21 @@ BURGER Menu
   }
 
 /*
-Nav Styling
+  Navigation Styling
 */
   .main-nav-list li {
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
-    height: 2rem;
+    height: 2.4rem;
+    font-weight: 400;
     text-transform: uppercase;
-    -webkit-transition: font-size .2s ease-in-out .3s;
-    transition: font-size .2s ease-in-out .3s;
+    -webkit-transition: font-size .2s ease-in-out;
+    transition: font-size .2s ease-in-out;
   }
 
   .main-nav-list li:hover {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
   }
 
   .main-heading {
@@ -310,35 +311,21 @@ Nav Styling
   }
 
 /*
-Main Wrapper Styling
+  Main Wrapper Styling
 */
   .col-main {
-    padding: 1rem 2rem 2rem;
+    padding: 0.6rem 2rem 2rem;
     text-align: justify;
   }
 
   .main-wrapper-col-left-list li {
     border-bottom: 1px solid rgba(224,224,224, 0.2);
-    padding: 0.7rem;
+    padding: 0.6rem;
   }
 
   .main-wrapper-col-left-list li:first-child {
     padding-top: 1.5rem;
   }
-
-  /*.main-wrapper-col-left-list li {
-    font-size: 1.1rem;
-    -webkit-transition: padding-bottom .3s, font-size .2s, color .2s;
-    transition: padding-bottom .3s, font-size .2s, color .2s;
-    -webkit-transition-timing-function: ease-in-out;
-    transition-timing-function: ease-in-out;
-  }
-
-  .main-wrapper-col-left-list li:hover {
-    padding-bottom: 1.2rem;
-    font-size: 1.2rem;
-    color: rgb(80, 80, 80);
-  }*/
 
   .main-wrapper-col-right-list {
     display: -webkit-box;
@@ -354,15 +341,11 @@ Main Wrapper Styling
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
-    height: 3rem;
-    line-height: 3rem;
+    height: 3.5rem;
+    line-height: 3.5rem;
     background-color: rgb(52, 160, 254);
     border-bottom: 2px solid rgb(248, 248, 248);
     color: rgb(248, 248, 248);
-  }
-
-  .main-wrapper-col-right-list li:last-child {
-    border-bottom: none;
   }
 
 /*
@@ -373,7 +356,6 @@ Main Wrapper Styling
     -ms-flex-pack: distribute;
     justify-content: space-around;
   }
-
 }
 
 /* =============================================================================
@@ -382,6 +364,9 @@ Main Wrapper Styling
 
 @media screen and (min-width: 701px) {
 
+/*
+  Header, Navigation
+*/
   .main-nav-list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -396,7 +381,7 @@ Main Wrapper Styling
     flex: 1 1 33.333333333%;
     border-bottom: 1px solid rgba(222, 233, 237, 0.4);
     border-right: 1px solid rgba(222, 233, 237, 0.4);
-    padding: 1.5rem;
+    padding: 1.2rem 0;
   }
 
   .main-nav-list li:last-child,
@@ -405,30 +390,31 @@ Main Wrapper Styling
   }
 
   .main-heading {
-    padding: 3rem 0 1.5rem 4rem;
+    padding: 3rem 0 1.5rem 2rem;
     text-align: left;
   }
 
+/*
+  Main Wrapper
+*/
   .main-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    padding-top: 1rem;
     -webkit-box-align: baseline;
     -ms-flex-align: baseline;
     align-items: baseline;
+    padding-top: 1.5rem;
   }
 
   .col-main {
     -webkit-box-flex: 1;
     -ms-flex: 1 1 66.66666666%;
     flex: 1 1 66.66666666%;
-    font-size: 1rem;
-    text-align: left;
-    padding-right: 3rem;
-    padding-bottom: 1rem;
+    padding-right: 1.5rem;
+    padding-bottom: 2rem;
   }
 
   .col-left {
@@ -453,7 +439,6 @@ Main Wrapper Styling
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
-
     background-color: rgb(52, 160, 254);
     border-right: 1px solid rgb(248, 248, 248);
     color: rgb(248, 248, 248);
@@ -468,10 +453,15 @@ Main Wrapper Styling
 /*
   Buttons margin
 */
-  .btn-more {
-    margin-left: 1.2rem;
-    margin-right: 0.4rem;
+  .btn-box {
+    border: none;
+    justify-content: center;
   }
+
+  .btn-more {
+      margin-left: 1.2rem;
+      margin-right: 0.5rem;
+    }
 
 }
 
